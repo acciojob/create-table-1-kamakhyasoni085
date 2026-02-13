@@ -1,63 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Create Table - Insert Row</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 30px;
-        }
-
-        table {
-            border-collapse: collapse;
-            margin-bottom: 15px;
-        }
-
-        td {
-            border: 1px solid black;
-            padding: 8px 12px;
-        }
-
-        button {
-            padding: 6px 12px;
-            cursor: pointer;
-        }
-    </style>
+  <title>Insert Row</title>
 </head>
 <body>
-<table id="sampleTable">
+
+<table id="sampleTable" border="1">
   <tr>
     <td>Row1 cell1</td>
     <td>Row1 cell2</td>
+  </tr>
+  <tr>
+    <td>Row2 cell1</td>
+    <td>Row2 cell2</td>
   </tr>
 </table>
 
 <input type="button" value="Insert row" onclick="insert_Row()">
 
+<script>
+function insert_Row() {
+    let table = document.getElementById("sampleTable");
+    let row = table.insertRow(0);
 
-    <!-- JavaScript -->
-    <script>
-        function insert_Row() {
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
 
-            // Get table
-            let table = document.getElementById("sampleTable");
-
-            // Insert row at TOP
-            let newRow = table.insertRow(0);
-
-            // Create cells
-            let cell1 = newRow.insertCell(0);
-            let cell2 = newRow.insertCell(1);
-
-            // Add text
-            cell1.innerHTML = "New Cell1";
-            cell2.innerHTML = "New Cell2";
-        }
-    </script>
+    cell1.innerHTML = "New Cell1";
+    cell2.innerHTML = "New Cell2";
+}
+</script>
 
 </body>
 </html>
+
 
 
