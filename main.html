@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert Row</title>
+    <meta charset="UTF-8">
+    <title>Create Table - Insert Row</title>
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        padding: 30px;
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
 
-    table {
-        border-collapse: collapse;
-        width: 300px;
-        margin-bottom: 15px;
-    }
+        table {
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
 
-    td, th {
-        border: 1px solid black;
-        padding: 8px;
-        text-align: center;
-    }
+        td {
+            border: 1px solid black;
+            padding: 8px 12px;
+        }
 
-    button {
-        padding: 8px 12px;
-        cursor: pointer;
-    }
-</style>
+        button {
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
-<h2>Sample Table</h2>
+    <h2>Sample Table</h2>
 
-<!-- TABLE -->
-<table id="sampleTable">
-    <tr>
-		<td>New Cell</td>
-        <td>Row1 cell1</td>
-        <td>Row1 cell2</td>
-    </tr>
-    <tr>
-		<td>New Cell2</td>
-        <td>Row2 cell1</td>
-        <td>Row2 cell2</td>
-    </tr>
-</table>
+    <!-- Table -->
+    <table id="sampleTable">
+        <tr>
+            <td>Row1 cell1</td>
+            <td>Row1 cell2</td>
+        </tr>
+        <tr>
+            <td>Row2 cell1</td>
+            <td>Row2 cell2</td>
+        </tr>
+    </table>
 
-<!-- BUTTON -->
-<button onclick="insert_Row()">
-    Insert row
-</button>
+    <!-- Button -->
+    <button onclick="insert_Row()">Insert row</button>
 
-<!-- JS LINK -->
-<script src="script.js"></script>
+    <!-- JavaScript -->
+    <script>
+        function insert_Row() {
+
+            // Get table
+            let table = document.getElementById("sampleTable");
+
+            // Insert row at TOP
+            let newRow = table.insertRow(0);
+
+            // Create cells
+            let cell1 = newRow.insertCell(0);
+            let cell2 = newRow.insertCell(1);
+
+            // Add text
+            cell1.innerHTML = "New Cell1";
+            cell2.innerHTML = "New Cell2";
+        }
+    </script>
 
 </body>
 </html>
+
 
