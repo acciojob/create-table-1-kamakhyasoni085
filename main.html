@@ -1,25 +1,59 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<meta charset=utf-8 /> 
-	<title>Insert row in a table</title> 
-	<link rel="stylesheet" href="styles.css">
-</head>
+<meta charset="UTF-8">
+<title>Insert Row</title>
 
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 300px;
+        margin-bottom: 15px;
+    }
+
+    td, th {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+
+    button {
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+</style>
+</head>
 <body>
-	<table id="sampleTable" border="1"> 
-		<tr><td>Row1 cell1</td> 
-		<td>Row1 cell2</td></tr> 
-		<tr><td>Row2 cell1</td> 
-		<td>Row2 cell2</td></tr> 
-	</table><br> 
-	
-	<input type="button" onclick="insert_Row()" value="Insert row">  
-    <script type="text/javascript" src="./script.js">
-</script>
+
+<h2>Sample Table</h2>
+
+<!-- TABLE -->
+<table id="sampleTable">
+    <tr>
+		<td>New Cell</td>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+    </tr>
+    <tr>
+		<td>New Cell2</td>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+    </tr>
+</table>
+
+<!-- BUTTON -->
+<button onclick="insert_Row()">
+    Insert row
+</button>
+
+<!-- JS LINK -->
+<script src="script.js"></script>
 
 </body>
-
 </html>
+
